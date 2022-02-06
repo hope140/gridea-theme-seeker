@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <%- include('./includes/head', { siteTitle: themeConfig.siteName }) %>
+  </head>
+  <body>
+    <div class="main px-4 flex flex-col lg:flex-row">
+      <%- include('./includes/sidebar', { isPostPage: false }) %>
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4">
+        <h2 class="latest-article text-lg text-gray-700 mb-8">
+          <i class="ri-article-line"></i>
+          最新文章
+        </h2>
+        <%- include('./includes/post-list') %>
+        <div class="read-more">
+          <% if (pagination.next) { %>
+            <a href="<%= pagination.next %>" class="animated fadeIn font-extrabold text-gray-700 hover:text-gray-900 more-btn">
+              阅读更多
+              <i class="ri-arrow-right-line"></i>
+            </a>
+          <% } %>
+        </div>
+        <div class="index-page">
+          <%- include('./includes/pagination') %>
+        </div>
+      </div>
+    </div>
+
+    <%- include('./includes/scripts') %>
+  </body>
+</html>

@@ -1,0 +1,76 @@
+<html>
+  <head>
+    <%- include('./includes/head', { siteTitle: themeConfig.siteName }) %>
+  </head>
+  <body>
+    <div id="app" class="main px-4 flex flex-col lg:flex-row">
+      <%- include('./includes/sidebar', { isPostPage: true }) %>
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
+        <h1 class="text-3xl font-bold lg:mt-16"><%= post.title %></h1>
+        <div class="text-sm text-gray-700 lg:my-8">
+          <%= post.dateFormat %> / <%= post.stats.text %>
+        </div>
+        <% if (themeConfig.showFeatureImage && post.feature) { %>
+          <img class="post-feature-image rounded-lg mx-auto my-4" src="<%= post.feature %>" alt="">
+        <% } %>
+        <div class="post-content yue">
+          <%- post.content %>
+        </div>
+
+        <% post.tags.forEach(function(tag) { %>
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="<%= tag.link %>">
+            <span class="flex-auto"><%= tag.name %></span>
+          </a>
+        <% }); %>
+        
+        <div class="post-Copyright py-12">
+          <span class="flex-auto"> 本文来源于 <%= themeConfig.siteName %></span>
+          <div class="prev-post">
+            <a href="<%= themeConfig.domain %>">
+              <h3 class="post-Copyright-link">
+                博客地址： <%= themeConfig.domain %>
+              </h3>
+            </a>
+          </div>
+        </div>
+
+        <div class="flex justify-between py-8">
+          <% if (post.prevPost) { %>
+            <div class="prev-post">
+              <a href="<%= post.prevPost.link %>">
+                <h3 class="post-title">
+                  <i class="ri-arrow-left-line"></i>
+                  <%= post.prevPost.title %>
+                </h3>
+              </a>
+            </div>
+          <% } %>
+
+          <% if (post.nextPost) { %>
+            <div class="next-post">
+              <a href="<%= post.nextPost.link %>">
+                <h3 class="post-title">
+                  <%= post.nextPost.title %>
+                  <i class="ri-arrow-right-line"></i>
+                </h3>
+              </a>
+            </div>
+          <% } %>
+        </div>
+
+        <% if (typeof commentSetting !== 'undefined' && commentSetting.showComment) { %>
+          <% if (commentSetting.commentPlatform === 'gitalk') { %>
+            <%- include('./includes/gitalk') %>
+          <% } %>
+
+          <% if (commentSetting.commentPlatform === 'disqus') { %>
+            <%- include('./includes/disqus') %>
+          <% } %>
+        <% } %>
+
+      </div>
+    </div>
+
+    <%- include('./includes/scripts') %>
+  </body>
+</html>

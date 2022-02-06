@@ -1,0 +1,19 @@
+<% posts.forEach(function(post, index) { %>
+  <section class="post-item md:flex pb-12 animated fadeIn" :style="{ 'animation-delay': `${<%= index %> * 0.2}s` }">
+    <% if (themeConfig.showFeatureImage && post.feature) { %>
+      <a href="<%= post.link %>" class="feature-image-wrapper bg-gray-100 rounded-lg flex-shrink-0 mr-8 w-full h-56 h-32 md:w-56 md:h-40">
+        <div class="post-feature-image lazy w-full h-56 h-32 md:w-56 md:h-40" data-bg="'<%= post.feature %>'">
+        </div>
+      </a>
+    <% } %>
+    <div class="content">
+      <a href="<%= post.link %>">
+        <h2 class="post-title text-xl font-extrabold mt-5 md:mt-0"><%= post.title %></h2>
+      </a>
+      <div class="post-abstract text-gray-700 font-light my-4">
+        <%- post.abstract %>
+      </div>
+      <div class="text-gray-400 text-sm font-light"><%= post.dateFormat %> / <%= post.stats.text %></div>
+    </div>
+  </section>
+<% }); %>

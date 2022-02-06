@@ -1,0 +1,8 @@
+<div class="pagination-container animated fadeIn">
+  <% if (pagination.prev) { %>
+    <a href="<%= pagination.prev %>" class="page-btn"><i class="ri-arrow-left-line"></i> 上一页</a>
+  <% } %>
+  <% if (pagination.next) { %>
+    <a href="<%= pagination.next %>" class="page-btn">下一页 <i class="ri-arrow-right-line"></i></a>
+  <% } %>
+</div>

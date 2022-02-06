@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <%- include('./includes/head', { siteTitle: themeConfig.siteName }) %>
+  </head>
+  <body>
+    <div id="app" class="main px-4 flex flex-col lg:flex-row">
+      <%- include('./includes/sidebar', { isPostPage: false }) %>
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4">
+        <h2 class="text-lg text-gray-700 mb-8">
+          <i class="ri-bookmark-2-line"></i> 标签云
+        </h2>
+        <div class="tags-container">
+          <% tags.forEach((tag, index) => { %>
+            <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="<%= tag.link %>" :style="{ 'animation-delay': `${<%= index %> * 0.2}s` }">
+              <span class="flex-auto"><%= tag.name %></span>
+              <span class="flex rounded-full bg-gray-200 px-2 py-1 text-xs ml-1"><%= tag.count %></span>
+            </a>
+          <% }); %>
+        </div>
+      </div>
+    </div>
+
+    <%- include('./includes/scripts') %>
+  </body>
+</html>
