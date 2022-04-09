@@ -1,0 +1,25 @@
+<html>
+
+<head>
+  <%- include('./includes/head', { siteTitle: themeConfig.siteName }) %>
+</head>
+
+<body>
+  <div class="main px-4 flex flex-col lg:flex-row">
+    <%- include('./includes/sidebar', { isPostPage: false }) %>
+    <div class="toc-container hidden lg:block">
+      <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E8%BF%99%E6%98%AF%E5%93%AA">暂无友链</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+
+  <%- include('./includes/scripts') %>
+</body>
+
+</html>
