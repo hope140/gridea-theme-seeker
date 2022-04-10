@@ -1,10 +1,9 @@
 {
   "name": "Seeker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "hope140",
   "repository": "https://github.com/hope140/gridea-theme-seeker",
-  "customConfig": [
-    {
+  "customConfig": [{
       "name": "github",
       "label": "Github",
       "group": "社交",
@@ -99,6 +98,31 @@
       "value": "",
       "type": "input",
       "note": "UA-xxxxxxxxx-x"
+    },
+    {
+      "name": "friends",
+      "label": "友链",
+      "group": "友情链接",
+      "value": "",
+      "type": "input",
+      "note": "url(多个链接使用空格分隔)"
+    },
+    {
+      "name": "waline",
+      "label": "是否显示",
+      "group": "Waline",
+      "value": "false",
+      "type": "select",
+      "options": [{
+          "label": "显示",
+          "value": "true"
+        },
+        {
+          "label": "隐藏",
+          "value": "false"
+        }
+      ],
+      "note":"Waline显示将自动隐藏Gridea自带评论系统"
     }
   ]
 }
