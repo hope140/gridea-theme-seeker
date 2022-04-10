@@ -12,7 +12,7 @@
         <%= post.title %>
       </h1>
       <div class="text-sm text-gray-700 lg:my-8">
-        <%= post.dateFormat %> / <%= post.stats.text %>
+        <%= post.dateFormat %> / <%= post.stats.text %> / <span id="/bw-netname/"  class="waline-visitor-count" > </span> 次阅读
       </div>
       <% if (themeConfig.showFeatureImage && post.feature) { %>
       <img class="post-feature-image rounded-lg mx-auto my-4" src="<%= post.feature %>" alt="">

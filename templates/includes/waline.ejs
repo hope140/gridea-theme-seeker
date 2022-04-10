@@ -1,10 +1,17 @@
-<div id="waline"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/hope140/gridea-theme-seeker/assets/styles/waline.css">
 <script src="https://cdn.jsdelivr.net/npm/@waline/client"></script>
+
+<div id="waline"></div>
 <script>
   Waline({
     el: '#waline',
     lang: 'zh-CN',
     visitor: true,
     serverURL: 'https://discuss.hope140.cc',
+    path: window.location.pathname,
+    dark: 'auto',
+    emoji: ['https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/bilibili',
+  'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/qq'],
+    avatar: 'retro',
   });
 </script>

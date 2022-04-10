@@ -14,7 +14,7 @@
             <%- themeConfig.siteDescription %>
           </p>
           <div class="animated fadeInLeft social-container hidden lg:block" style="animation-delay: 0.6s">
-            <% ['github', 'twitter', 'weibo', 'zhihu', 'facebook', 'telegram', 'dribbble', 'instagram', 'behance', 'qq'].forEach((item) => { %>
+            <% ['github', 'twitter', 'weibo', 'zhihu', 'facebook', 'telegram', 'dribbble', 'instagram', 'behance', 'qq', 'cloud'].forEach((item) => { %>
               <% if (site.customConfig[item]) { %>
                 <a href="<%= site.customConfig[item] %>" target="_blank" class="mr-4 text-xl text-gray-400 font-light hover:text-gray-900">
                   <i class="ri-<%= item %>-line"></i>
