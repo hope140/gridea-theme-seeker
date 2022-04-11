@@ -9,7 +9,9 @@ a theme for gridea
 
 - [x] ”关于“界面调整（原主题中about.md）
 
-- [x] Waline评论系统（各参数待进一步完善）
+- [x] Waline评论系统（各参数待进一步完善，已完成基本评论功能，阅读数以及评论数统计）
+
+- [ ] 更换默认字体
 
 - [ ] [搜索功能]: https://github.com/kytrun/gridea-search
 
