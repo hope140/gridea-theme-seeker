@@ -75,7 +75,7 @@
 				<% } %>
 			</div>
 
-			<% if (site.customConfig.waline){ %>
+			<% if (site.customConfig.waline === 'true'){ %>
 			<%- include('./includes/waline') %>
 			<% } else {%>
 			<% if (typeof commentSetting !=='undefined' && commentSetting.showComment) { %>
