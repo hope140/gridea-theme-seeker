@@ -1,27 +1,27 @@
 <html>
 
 <head>
-  <%- include('./includes/head', { siteTitle: themeConfig.siteName }) %>
+	<%- include('./includes/head', { siteTitle: themeConfig.siteName }) %>
 </head>
 
 <body>
-  <div class="main px-4 flex flex-col lg:flex-row">
-    <%- include('./includes/sidebar', { isPostPage: false }) %>
-    <div class="toc-container hidden lg:block">
-      <ul class="markdownIt-TOC">
-        <li>
-          <ul>
-            <li><a href="#%E8%BF%99%E6%98%AF%E5%93%AA">🏠 这是哪</a></li>
-            <li><a href="#%E6%88%91%E6%98%AF%E8%B0%81">👨‍💻 我是谁</a></li>
-            <li><a href="#%E5%81%9A%E4%BB%80%E4%B9%88">⛹ 做什么</a></li>
-          </ul>
-        </li>
-      </ul>
+	<div class="main px-4 flex flex-col lg:flex-row">
+		<%- include('./includes/sidebar', { isPostPage: false }) %>
+		<div class="toc-container hidden lg:block">
+			<ul class="markdownIt-TOC">
+				<li>
+					<ul>
+						<li><a href="#%E8%BF%99%E6%98%AF%E5%93%AA">🏠 这是哪</a></li>
+						<li><a href="#%E6%88%91%E6%98%AF%E8%B0%81">👨‍💻 我是谁</a></li>
+						<li><a href="#%E5%81%9A%E4%BB%80%E4%B9%88">⛹ 做什么</a></li>
+					</ul>
+				</li>
+			</ul>
 
-    </div>
-  </div>
+		</div>
+	</div>
 
-  <%- include('./includes/scripts') %>
+	<%- include('./includes/scripts') %>
 </body>
 
 </html>

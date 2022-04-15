@@ -1,136 +1,136 @@
 {
-  "name": "Seeker",
-  "version": "1.0.1",
-  "author": "hope140",
-  "repository": "https://github.com/hope140/gridea-theme-seeker",
-  "customConfig": [{
-      "name": "github",
-      "label": "Github",
-      "group": "社交",
-      "value": "",
-      "type": "input",
-      "note": "链接地址"
-    },
-    {
-      "name": "twitter",
-      "label": "Twitter",
-      "group": "社交",
-      "value": "",
-      "type": "input",
-      "note": "链接地址"
-    },
-    {
-      "name": "weibo",
-      "label": "微博",
-      "group": "社交",
-      "value": "",
-      "type": "input",
-      "note": "链接地址"
-    },
-    {
-      "name": "zhihu",
-      "label": "知乎",
-      "group": "社交",
-      "value": "",
-      "type": "input",
-      "note": "链接地址"
-    },
-    {
-      "name": "facebook",
-      "label": "Facebook",
-      "group": "社交",
-      "value": "",
-      "type": "input",
-      "note": "链接地址"
-    },
-    {
-      "name": "telegram",
-      "label": "Telegram",
-      "group": "社交",
-      "value": "",
-      "type": "input",
-      "note": "链接地址"
-    },
-    {
-      "name": "dribbble",
-      "label": "Dribbble",
-      "group": "社交",
-      "value": "",
-      "type": "input",
-      "note": "链接地址"
-    },
-    {
-      "name": "instagram",
-      "label": "Instagram",
-      "group": "社交",
-      "value": "",
-      "type": "input",
-      "note": "链接地址"
-    },
-    {
-      "name": "behance",
-      "label": "Behance",
-      "group": "社交",
-      "value": "",
-      "type": "input",
-      "note": "链接地址"
-    },
-    {
-      "name": "qq",
-      "label": "QQ",
-      "group": "社交",
-      "value": "",
-      "type": "input",
-      "note": "链接地址"
-    },
-    {
-      "name": "cloud",
-      "label": "网盘",
-      "group": "社交",
-      "value": "",
-      "type": "input",
-      "note": "链接地址"
-    },
-    {
-      "name": "customCss",
-      "label": "自定义CSS",
-      "group": "自定义样式",
-      "value": "",
-      "type": "textarea",
-      "note": ""
-    },
-    {
-      "name": "ga",
-      "label": "跟踪 ID",
-      "group": "谷歌统计",
-      "value": "",
-      "type": "input",
-      "note": "UA-xxxxxxxxx-x"
-    },
-    {
-      "name": "friends",
-      "label": "友链",
-      "group": "友情链接",
-      "value": "",
-      "type": "input",
-      "note": "url(多个链接使用空格分隔)"
-    },
-    {
-      "name": "waline",
-      "label": "是否显示",
-      "group": "Waline",
-      "value": "false",
-      "type": "select",
-      "options": [{
-          "label": "显示",
-          "value": "true"
-        },
-        {
-          "label": "隐藏",
-          "value": "false"
-        }
-      ],
-      "note":"Waline显示将自动隐藏Gridea自带评论系统"
-    }
-  ]
+	"name": "Seeker",
+	"version": "1.0.1",
+	"author": "hope140",
+	"repository": "https://github.com/hope140/gridea-theme-seeker",
+	"customConfig": [{
+			"name": "github",
+			"label": "Github",
+			"group": "社交",
+			"value": "",
+			"type": "input",
+			"note": "链接地址"
+		},
+		{
+			"name": "twitter",
+			"label": "Twitter",
+			"group": "社交",
+			"value": "",
+			"type": "input",
+			"note": "链接地址"
+		},
+		{
+			"name": "weibo",
+			"label": "微博",
+			"group": "社交",
+			"value": "",
+			"type": "input",
+			"note": "链接地址"
+		},
+		{
+			"name": "zhihu",
+			"label": "知乎",
+			"group": "社交",
+			"value": "",
+			"type": "input",
+			"note": "链接地址"
+		},
+		{
+			"name": "facebook",
+			"label": "Facebook",
+			"group": "社交",
+			"value": "",
+			"type": "input",
+			"note": "链接地址"
+		},
+		{
+			"name": "telegram",
+			"label": "Telegram",
+			"group": "社交",
+			"value": "",
+			"type": "input",
+			"note": "链接地址"
+		},
+		{
+			"name": "dribbble",
+			"label": "Dribbble",
+			"group": "社交",
+			"value": "",
+			"type": "input",
+			"note": "链接地址"
+		},
+		{
+			"name": "instagram",
+			"label": "Instagram",
+			"group": "社交",
+			"value": "",
+			"type": "input",
+			"note": "链接地址"
+		},
+		{
+			"name": "behance",
+			"label": "Behance",
+			"group": "社交",
+			"value": "",
+			"type": "input",
+			"note": "链接地址"
+		},
+		{
+			"name": "qq",
+			"label": "QQ",
+			"group": "社交",
+			"value": "",
+			"type": "input",
+			"note": "链接地址"
+		},
+		{
+			"name": "cloud",
+			"label": "网盘",
+			"group": "社交",
+			"value": "",
+			"type": "input",
+			"note": "链接地址"
+		},
+		{
+			"name": "customCss",
+			"label": "自定义CSS",
+			"group": "自定义样式",
+			"value": "",
+			"type": "textarea",
+			"note": ""
+		},
+		{
+			"name": "ga",
+			"label": "跟踪 ID",
+			"group": "谷歌统计",
+			"value": "",
+			"type": "input",
+			"note": "UA-xxxxxxxxx-x"
+		},
+		{
+			"name": "friends",
+			"label": "友链",
+			"group": "友情链接",
+			"value": "",
+			"type": "input",
+			"note": "url(多个链接使用空格分隔)"
+		},
+		{
+			"name": "waline",
+			"label": "是否显示",
+			"group": "Waline",
+			"value": "false",
+			"type": "select",
+			"options": [{
+					"label": "显示",
+					"value": "true"
+				},
+				{
+					"label": "隐藏",
+					"value": "false"
+				}
+			],
+			"note": "Waline显示将自动隐藏Gridea自带评论系统"
+		}
+	]
 }

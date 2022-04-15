@@ -1,16 +1,16 @@
 const generateOverride = (params = {}) => {
-  let result = ''
+	let result = ''
 
-  if (params.customCss) {
-    result += `
+	if (params.customCss) {
+		result += `
       ${params.customCss}
     `
-  }
+	}
 
 
-  console.log('result', result)
+	console.log('result', result)
 
-  return result
+	return result
 }
 
 module.exports = generateOverride

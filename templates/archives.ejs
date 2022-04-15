@@ -1,41 +1,45 @@
 <html>
-  <head>
-    <%- include('./includes/head', { siteTitle: themeConfig.siteName }) %>
-  </head>
-  <body>
-    <div id="app" class="main px-4 flex flex-col lg:flex-row">
-      <%- include('./includes/sidebar', { isPostPage: false }) %>
-      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4">
-        <h2 class="text-lg text-gray-700 mb-8">
-          <i class="ri-archive-line"></i> 文章归档
-        </h2>
-        <% let years = []; posts.forEach((item) => { const year = item.date.substring(0, 4); if (!years.includes(year)) { years.push(year); } }); %>
 
-        <div class="archives-container">
-          <% years.forEach(function(year) { %>
-            <h2 class="text-gray-600 py-4 animated fadeIn">
-              <i class="ri-map-pin-time-line"></i>
-              <%- year %>
-            </h2>
-            <% posts.forEach(function(post) { %>
-              <%if (post.date.indexOf(year) !== -1) { %>
-                <a href="<%= post.link %>" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                    <%= post.title %>
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s"><%= post.dateFormat %></div>
-              <% } %>
-            <% }); %>
-          <% }); %>
-        </div>
+<head>
+	<%- include('./includes/head', { siteTitle: themeConfig.siteName }) %>
+</head>
 
-        <div>
-          <%- include('./includes/pagination') %>
-        </div>
-      </div>
-    </div>
+<body>
+	<div id="app" class="main px-4 flex flex-col lg:flex-row">
+		<%- include('./includes/sidebar', { isPostPage: false }) %>
+		<div class="content-wrapper py-32 lg:p-8 lg:w-3/4">
+			<h2 class="text-lg text-gray-700 mb-8">
+				<i class="ri-archive-line"></i> 文章归档
+			</h2>
+			<% let years = []; posts.forEach((item) => { const year = item.date.substring(0, 4); if (!years.includes(year)) { years.push(year); } }); %>
 
-    <%- include('./includes/scripts') %>
-  </body>
+			<div class="archives-container">
+				<% years.forEach(function(year) { %>
+				<h2 class="text-gray-600 py-4 animated fadeIn">
+					<i class="ri-map-pin-time-line"></i>
+					<%- year %>
+				</h2>
+				<% posts.forEach(function(post) { %>
+				<%if (post.date.indexOf(year) !== -1) { %>
+				<a href="<%= post.link %>" class="post">
+					<h2 class="inline-block font-bold text-lg post-title animated fadeIn">
+						<%= post.title %>
+					</h2>
+				</a>
+				<div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown"
+					style="animation-delay: 0.4s"><%= post.dateFormat %></div>
+				<% } %>
+				<% }); %>
+				<% }); %>
+			</div>
+
+			<div>
+				<%- include('./includes/pagination') %>
+			</div>
+		</div>
+	</div>
+
+	<%- include('./includes/scripts') %>
+</body>
+
 </html>
