@@ -11,10 +11,11 @@
 			<h1 class="text-3xl font-bold lg:mt-16">
 				<%= post.title %>
 			</h1>
-			<% if (typeof post.path !=='undefined') { %>
+			<!-- 由于"/"字符只好做postPath的判断 -->
+			<% if (typeof themeConfig.postPath !=='undefined') { %>
 			<div class="text-sm text-gray-700 lg:my-8">
-				<%= post.dateFormat %> / <%= post.stats.text %> / <span id="/<%- post.path %> /<%= post.fileName %>/"
-					class="waline-visitor-count"> </span> 阅读 / <span id="/<%= post.fileName %>/"
+				<%= post.dateFormat %> / <%= post.stats.text %> / <span id="/<%- themeConfig.postPath %> /<%= post.fileName %>/"
+					class="waline-visitor-count"> </span> 阅读 / <span id="/<%- themeConfig.postPath %> /<%= post.fileName %>/"
 					class="waline-comment-count"></span>评论
 			</div>
 			<% } else { %>
@@ -24,6 +25,7 @@
 					class="waline-comment-count"></span>评论
 			</div>
 			<% } %>
+			<!-- 如果有更好办法再做修改 -->
 			<% if (themeConfig.showFeatureImage && post.feature) { %>
 			<img class="post-feature-image rounded-lg mx-auto my-4" src="<%= post.feature %>" alt="">
 			<% } %>
