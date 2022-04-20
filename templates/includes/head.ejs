@@ -1,7 +1,12 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title><%= siteTitle %></title>
-<meta name="description" content="<%- themeConfig.siteDescription %>" />
+<title><%= themeConfig.siteName %></title>
+<!-- description在post页面应有不同 -->
+<% if(!isPostPage) { %>
+	<meta name="description" content="<%- themeConfig.siteDescription %>" />
+	<% } else { %>
+	<meta name="description" content="<%- post.abstract %>" />
+<% } %>
 <link rel="shortcut icon" href="<%= themeConfig.domain %>/favicon.ico?v=<%= site.utils.now %>">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
