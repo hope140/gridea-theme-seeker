@@ -5,7 +5,8 @@
 <% if(!isPostPage) { %>
 	<meta name="description" content="<%- themeConfig.siteDescription %>" />
 	<% } else { %>
-	<meta name="description" content="<%- post.abstract %>" />
+	<meta name="description" content="<%- post.abstract.replace(/<\/?.+?\/?>/g,'') %>" />
+<!-- post.abstract自带html标签，匹配去除（句中出现html可能性几乎为0，要是有再说吧(┬┬﹏┬┬)） -->
 <% } %>
 <link rel="shortcut icon" href="<%= themeConfig.domain %>/favicon.ico?v=<%= site.utils.now %>">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
