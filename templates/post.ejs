@@ -11,8 +11,8 @@
 			<h1 class="text-3xl font-bold lg:mt-16">
 				<%= post.title %>
 			</h1>
-			<!-- 由于"/"字符只好做postPath的判断 -->
-			<% if (typeof themeConfig.postPath !=='undefined') { %>
+			<!-- 由于"/"字符只好做postPath的判断，一个string，值为' '，也是挺离谱的 -->
+			<% if (themeConfig.postPath ===' ') { %>
 			<div class="text-sm text-gray-700 lg:my-8">
 				<%= post.dateFormat %> / <%= post.stats.text %> / <span id="/<%- themeConfig.postPath %> /<%= post.fileName %>/"
 					class="waline-visitor-count"> </span> 阅读 / <span id="/<%- themeConfig.postPath %> /<%= post.fileName %>/"
