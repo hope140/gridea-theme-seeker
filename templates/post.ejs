@@ -15,13 +15,13 @@
 			<% if (themeConfig.postPath ===' ') { %>
 			<div class="text-sm text-gray-700 lg:my-8">
 				<%= post.dateFormat %> / <%= post.stats.text %> / <span id="/<%- themeConfig.postPath %> /<%= post.fileName %>/"
-					class="waline-visitor-count"> </span> 阅读 / <span id="/<%- themeConfig.postPath %> /<%= post.fileName %>/"
+					class="waline-pageview-count"> </span> 阅读 / <span id="/<%- themeConfig.postPath %> /<%= post.fileName %>/"
 					class="waline-comment-count"></span>评论
 			</div>
 			<% } else { %>
 			<div class="text-sm text-gray-700 lg:my-8">
 				<%= post.dateFormat %> / <%= post.stats.text %> / <span id="/<%= post.fileName %>/"
-					class="waline-visitor-count"> </span> 阅读 / <span id="/<%= post.fileName %>/"
+					class="waline-pageview-count"> </span> 阅读 / <span id="/<%= post.fileName %>/"
 					class="waline-comment-count"></span>评论
 			</div>
 			<% } %>
