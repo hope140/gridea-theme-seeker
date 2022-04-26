@@ -1,18 +1,18 @@
+<script src="https://cdn.jsdelivr.net/npm/@waline/client/dist/waline.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/hope140/gridea-theme-seeker/assets/styles/waline.min.css">
-<script src="https://cdn.jsdelivr.net/npm/@waline/client"></script>
 
 <div id="waline"></div>
 <script>
-	Waline({
+	Waline.init({
 		el: '#waline',
 		lang: 'zh-CN',
-		visitor: true,
+		pageview: true,
+		comment: true,
 		serverURL: 'https://discuss.hope140.cc',
 		path: window.location.pathname,
 		dark: 'auto',
 		emoji: ['https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/bilibili',
 			'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/qq'
 		],
-		avatar: 'retro',
 	});
 </script>
