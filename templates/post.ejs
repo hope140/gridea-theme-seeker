@@ -11,7 +11,7 @@
 			<h1 class="text-3xl font-bold lg:mt-16">
 				<%= post.title %>
 			</h1>
-			<!-- 由于"/"字符只好做postPath的判断，一个string，值为' '，也是挺离谱的 -->
+			<!-- 由于"/"字符只好做postPath的判断，不设定postPath时是一个长度为0的字符串 -->
 			<% if (themeConfig.postPath ===' ') { %>
 			<div class="text-sm text-gray-700 lg:my-8">
 				<%= post.dateFormat %> / <%= post.stats.text %> / <span id="/<%- themeConfig.postPath %> /<%= post.fileName %>/"
