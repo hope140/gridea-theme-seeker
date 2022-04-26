@@ -1,16 +1,17 @@
 function show_runtime() {
+	// 1000毫秒运行一次
 	window.setTimeout("show_runtime()", 1000);
-	X = new Date("1/23/2022 7:55:00");
-	Y = new Date();
-	T = (Y.getTime() - X.getTime());
-	M = 24 * 60 * 60 * 1000;
-	a = T / M;
-	A = Math.floor(a);
-	b = (a - A) * 24;
-	B = Math.floor(b);
-	c = (b - B) * 60;
-	C = Math.floor((b - B) * 60);
-	D = Math.floor((c - C) * 60);
-	runtime_span.innerHTML = "网站被摧残了: " + A + "天" + B + "小时" + C + "分" + D + "秒"
+	var
+		born = new Date("1/23/2022 7:55:00"),
+		now = new Date(),
+		span = (now.getTime() - born.getTime()),
+		span_day = span / (24 * 60 * 60 * 1000),
+		days = Math.floor(span_day),
+		span_hour = (span_day - days) * 24,
+		hours = Math.floor(span_hour),
+		span_minute = (span_hour - hours) * 60,
+		minutes = Math.floor(span_minute),
+		seconds = Math.floor((span_minute - minutes) * 60);
+	runtime_span.innerHTML = `网站被摧残了: ${days}天${hours}小时${minutes}分${seconds}秒`;
 }
 show_runtime();
