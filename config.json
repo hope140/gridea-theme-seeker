@@ -1,9 +1,10 @@
 {
 	"name": "Seeker",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"author": "hope140",
 	"repository": "https://github.com/hope140/gridea-theme-seeker",
-	"customConfig": [{
+	"customConfig": [
+		{
 			"name": "github",
 			"label": "Github",
 			"group": "社交",
@@ -113,30 +114,11 @@
 			"group": "友链",
 			"type": "array",
 			"value": [],
-			"arrayItems": [{
-					"label": "名称",
-					"name": "siteName",
-					"type": "input",
-					"value": ""
-				},
-				{
-					"label": "链接",
-					"name": "siteLink",
-					"type": "input",
-					"value": ""
-				},
-				{
-					"label": "Logo",
-					"name": "siteLogo",
-					"type": "input",
-					"value": ""
-				},
-				{
-					"label": "描述",
-					"name": "description",
-					"type": "textarea",
-					"value": ""
-				}
+			"arrayItems": [
+				{ "label": "名称", "name": "siteName", "type": "input", "value": "" },
+				{ "label": "链接", "name": "siteLink", "type": "input", "value": "" },
+				{ "label": "Logo", "name": "siteLogo", "type": "input", "value": "" },
+				{ "label": "描述", "name": "description", "type": "textarea", "value": "" }
 			],
 			"note": ""
 		},
@@ -158,19 +140,10 @@
 		},
 		{
 			"name": "waline",
-			"label": "是否显示",
+			"label": "是否使用Waline作为评论系统",
 			"group": "Waline",
-			"value": "false",
-			"type": "select",
-			"options": [{
-					"label": "显示",
-					"value": "true"
-				},
-				{
-					"label": "隐藏",
-					"value": "false"
-				}
-			],
+			"type": "switch",
+			"value": false,
 			"note": "Waline显示将自动隐藏Gridea自带评论系统"
 		}
 	]

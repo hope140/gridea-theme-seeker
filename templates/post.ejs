@@ -1,7 +1,7 @@
 <html>
 
 <head>
-	<%- include('./includes/head', { isPostPage: true }) %>
+	<%- include('./includes/head', { isPostPage: false, siteTitle: `${post.title} | ${themeConfig.siteName}` }) %>
 </head>
 
 <body>
@@ -77,7 +77,7 @@
 				<% } %>
 			</div>
 
-			<% if (site.customConfig.waline === 'true'){ %>
+			<% if (site.customConfig.waline === true){ %>
 			<%- include('./includes/waline') %>
 			<% } else {%>
 			<% if (typeof commentSetting !=='undefined' && commentSetting.showComment) { %>
