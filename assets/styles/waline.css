@@ -562,6 +562,68 @@
 	background: var(--waline-bgcolor)
 }
 
+.wl-gif-popup {
+	position: absolute;
+	top: 100%;
+	left: 1.25em;
+	z-index: 10;
+	width: calc(100% - 3em);
+	padding: .75em .75em .25em;
+	border: var(--waline-border);
+	border-radius: 6px;
+	background: var(--waline-bgcolor);
+	box-shadow: var(--waline-box-shadow);
+	opacity: 0;
+	visibility: hidden;
+	transition: transform .2s ease-out, opacity .2s ease-out;
+	transform: scale(0.9, 0.9);
+	transform-origin: 0 0
+}
+
+.wl-gif-popup.display {
+	opacity: 1;
+	visibility: visible;
+	transform: none
+}
+
+.wl-gif-popup input {
+	box-sizing: border-box;
+	width: 100%;
+	margin-bottom: 10px;
+	padding: 3px 5px;
+	border: var(--waline-border)
+}
+
+.wl-gif-popup img {
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #fff;
+	cursor: pointer
+}
+
+.wl-gif-popup img:hover {
+	border-color: var(--waline-theme-color);
+	border-radius: 2px
+}
+
+.wl-gallery {
+	max-height: 80vh;
+	display: flex;
+	overflow-y: auto
+}
+
+.wl-gallery-column {
+	height: -webkit-max-content;
+	height: -moz-max-content;
+	height: max-content;
+	flex: 1;
+	display: flex;
+	flex-direction: column
+}
+
 .wl-cards .wl-item {
 	position: relative;
 	display: flex;
@@ -641,11 +703,11 @@
 
 .wl-card .wl-badge {
 	display: inline-block;
-	margin-right: .5em;
+	margin-right: 1em;
 	padding: 0 .3em;
-	border-radius: 3px;
-	background: var(--waline-badge-color);
-	color: var(--waline-white);
+	border: 1px solid var(--waline-badge-color);
+	border-radius: 4px;
+	color: var(--waline-badge-color);
 	font-size: var(--waline-badge-font-size)
 }
 
@@ -653,25 +715,6 @@
 	margin-right: .875em;
 	color: var(--waline-info-color);
 	font-size: .75em
-}
-
-.wl-card .wl-reply {
-	float: right;
-	padding: 4px;
-	border: none;
-	background: rgba(0, 0, 0, 0);
-	color: var(--waline-color);
-	line-height: 1;
-	cursor: pointer;
-	transition: color .2s ease
-}
-
-.wl-card .wl-reply:hover {
-	color: var(--waline-theme-color)
-}
-
-.wl-card .wl-reply.active {
-	color: var(--waline-active-color)
 }
 
 .wl-card .wl-meta {
@@ -698,6 +741,36 @@
 
 .wl-card .wl-meta>span:empty {
 	display: none
+}
+
+.wl-card .wl-comment-actions {
+	float: right
+}
+
+.wl-card .wl-delete,
+.wl-card .wl-like,
+.wl-card .wl-reply {
+	display: inline-flex;
+	align-items: center;
+	padding: 4px;
+	border: none;
+	background: rgba(0, 0, 0, 0);
+	color: var(--waline-color);
+	line-height: 1;
+	cursor: pointer;
+	transition: color .2s ease
+}
+
+.wl-card .wl-delete:hover,
+.wl-card .wl-like:hover,
+.wl-card .wl-reply:hover {
+	color: var(--waline-theme-color)
+}
+
+.wl-card .wl-delete.active,
+.wl-card .wl-like.active,
+.wl-card .wl-reply.active {
+	color: var(--waline-active-color)
 }
 
 .wl-card .wl-content {
@@ -750,6 +823,28 @@
 	margin-bottom: 0
 }
 
+.wl-card .wl-admin-actions {
+	margin: 8px 0;
+	font-size: 12px;
+	text-align: right
+}
+
+.wl-card .wl-comment-status {
+	margin: 0 8px
+}
+
+.wl-card .wl-comment-status .wl-btn {
+	border-radius: 0
+}
+
+.wl-card .wl-comment-status .wl-btn:first-child {
+	border-radius: .5em 0 0 .5em
+}
+
+.wl-card .wl-comment-status .wl-btn:last-child {
+	border-radius: 0 .5em .5em 0
+}
+
 .wl-card .wl-quote {
 	border-left: 1px dashed rgba(237, 237, 237, .5)
 }
@@ -765,9 +860,9 @@
 .wl-content .vemoji,
 .wl-content .wl-emoji {
 	display: inline-block;
-	vertical-align: middle;
-	width: 1.25em;
-	margin: .25em
+	vertical-align: baseline;
+	height: 1.25em;
+	margin: -0.125em .25em
 }
 
 .wl-content .wl-tex {
